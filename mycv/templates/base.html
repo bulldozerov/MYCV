@@ -1,13 +1,33 @@
 {% load static %}
+
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <meta charset='UTF-8'>
-    <title>{%block title%}My CV{% endblock %}</title>
-    <link rel='stylesheet' href ="{% static 'css/style.css' %}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %} Bulldozerov {% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
 </head>
 <body>
-    {% block content%}
+  <header>
+    <a href="{% url 'home' %}" class="logo">:3</a>
+    <nav>
+      <a href="{% url 'home' %}"      class="{% if request.resolver_match.url_name == 'home'      %}active{% endif %}">Main page</a>
+      <a href="{% url 'about' %}"     class="{% if request.resolver_match.url_name == 'about'     %}active{% endif %}">About me</a>
+      <a href="{% url 'resume' %}"    class="{% if request.resolver_match.url_name == 'resume'    %}active{% endif %}">Resume</a>
+      <a href="{% url 'portfolio' %}" class="{% if request.resolver_match.url_name == 'portfolio' %}active{% endif %}">Portfolio</a>
+      <a href="{% url 'contact' %}"   class="{% if request.resolver_match.url_name == 'contact'   %}active{% endif %}">Contact me</a>
+    </nav>
+  </header>
+
+  <main>
+    {% block content %}
     {% endblock %}
+  </main>
+
+  <footer>
+    <p> Ashim Bulldozerov </p>
+  </footer>
+
 </body>
 </html>

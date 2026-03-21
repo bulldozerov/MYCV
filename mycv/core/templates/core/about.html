@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About me{% endblock %}
+
+{% block content %}
+<div class="page">
+  <h1> About me </h1>
+
+  <div class="about-grid">
+    <div class="about-text">
+      <p>
+        First
+      </p>
+      <p>
+        Second
+      </p>
+      <p>
+        Third
+      </p>
+
+      <div class="about-facts">
+        <div class="fact">
+          <span class="fact__label">Location</span>
+          <span class="fact__value">Almaty</span>
+        </div>
+        <div class="fact">
+          <span class="fact__label">Stack</span>
+          <span class="fact__value">Python · Django · PostgreSQL</span>
+        </div>
+        <div class="fact">
+          <span class="fact__label">Status</span>
+          <span class="fact__value">Ready for offers</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-photo">
+      <div class="photo-placeholder">Photo</div>
+    </div>
+  </div>
+</div>
+{% endblock %}

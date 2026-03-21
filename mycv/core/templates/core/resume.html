@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Resume{% endblock %}
+
+{% block content %}
+<div class="page">
+  <div class="page-header">
+    <h1>Resume</h1>
+  </div>
+
+  <section class="cv-section">
+    <h2>Degree</h2>
+    <div class="cv-item">
+      <div class="cv-item__meta">
+        <strong>Narxoz University</strong>
+        <span class="cv-item__date">2024-2028</span>
+      </div>
+      <p class="cv-item__role">Bachelor, Data Science</p>
+    </div>
+  </section>
+
+  <section class="cv-section">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3>Backend</h3>
+        <ul>
+          <li>Python</li>
+          <li>Django / DRF</li>
+          <li>PostgreSQL</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Tools</h3>
+        <ul>
+          <li>Git / GitHub</li>
+          <li>Docker</li>
+          <li>Linux</li>
+          <li>PowerBI</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Other</h3>
+        <ul>
+          <li>REST API</li>
+          <li>HTML / CSS (basic)</li>
+          <li>Английский C1</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+{% endblock %}

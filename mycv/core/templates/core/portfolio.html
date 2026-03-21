@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Porfolio{% endblock %}
+
+{% block content %}
+<div class="page">
+  <div class="page-header">
+    <h1>Portfolio</h1>
+    <a href="https://github.com/bulldozerov" target="_blank" class="btn-github">
+      GitHub →
+    </a>
+  </div>
+
+  <div class="projects">
+    <article class="project-card">
+      <div class="project-card__num">01</div>
+      <div class="project-card__body">
+        <div class="project-card__image">
+          <div class="img-placeholder">Screenshot</div>
+        </div>
+        <div class="project-card__info">
+          <h2>Название проекта</h2>
+          <p>Описание проекта. Что делает, какой стек, зачем было сделано.
+             Пара предложений чтобы было понятно о чём речь.</p>
+          <div class="project-card__links">
+            <a href="https://github.com/yourname/project" target="_blank">GitHub</a>
+            <a href="#" target="_blank">Live →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
+{% endblock %}

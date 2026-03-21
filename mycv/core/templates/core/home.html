@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Main page{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <h1 class="hero__name">Ashim Burabaev</h1>
+  <p class="hero__sub">Backend · Python · Django</p>
+
+  <div class="hero__socials">
+    <a href="https://github.com/bulldozerov" target="_blank" class="social-link" title="GitHub">
+      <img src = '{% static "core/images/git.png" %}' alt = 'Icon 1'width = "28" height = "28">
+    </a>
+    <a href="https://t.me/bulldozer667" target="_blank" class="social-link" title="Telegram">
+      <img src = '{% static "core/images/tg.png" %}' alt = 'Icon 2'width = "30" height = "30">
+    </a>
+  </div>
+
+  <a href="{% url 'portfolio' %}" class="btn-cta">Check my works →</a>
+</section>
+{% endblock %}
